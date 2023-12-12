@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/contacto.css">
+    <title>Contacto</title>
+    <script src="JS/validar.js"></script>
+    <link rel="icon" href="img/logos/escudo-salta.jpg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logotipo">
+                <img src="img/logos/tur-salta.png" width="100">
+                <img src="img/logos/band-prov-salta.jpg" width="100">
+                <img src="img/logos/escudo-salta.jpg" width="55">
+            </div>
+            <h1>Comidas regionales de Salta</h1>
+            <nav class="navheader">
+                <a class="navh" href="index.html">Home</a>
+                <a class="navh" href="q_somos.html">Quienes somos</a>
+                <a class="navh" href="g_locales.html">Locales</a>
+                <a class="navh" href="recetas.html">Recetas</a>
+                <a class="navh" href="cartaV.html">Vinos</a>
+                <a class="navh" href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+        <main class="contenido">
+            <h2>Formulario de Contacto</h2>
+            <h3>Complete el formulario con sus datos, sugerencias y opiniones:</h3>
+            
+            <form name="f1"onsubmit="return validar();" action="https://formspree.io/f/mleyzkkk" method="POST">
+                <fieldset>
+                    <legend>Datos personales: (*) Campos obligatorios</legend>
+                    <br>
+                    <div class="div1">
+                        <label for="nombre">Nombre: (*)</label>
+                        <input type="text" name="nombre" id="nombre" onclick="valNombre()" 
+                            placeholder="Ingrese su nombre aqui...">
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="apellido">Apellido: (*)</label>
+                        <input type="text" name="apellido" id="apellido" onclick="valApellido()" 
+                            placeholder="Ingrese su apellido aqui...">
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="nacion">Nacionalidad: (*)</label>
+                        <select type="text" id="nacion" name="nacion" onclick="valNacion()">
+                            <option value="Seleccione una opcion">Seleccione una opción</option>
+                            <option value="argentino">Argentino/a</option>
+                            <option value="extranjero">Extranjero/a</option>
+                            <option value="nacionalizado">Nacionalizado/a</option>
+                            <option value="nc">NC</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="local">Localidad: </label>
+                        <input type="text" name="local" id="local" placeholder="Ingrese su localidad">
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="cpost">Código Postal:</label>
+                        <input type="text" name="cpost" id="cpost" placeholder="Ingrese su codigo postal aqui...">
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="tel">Teléfono: </label>
+                        <input type="text" name="tel" id="tel" placeholder="Ingrese su telefono aqui ....">
+                    </div>
+                    <br>
+                    <div class="div1">
+                        <label for="email">Email: (*)</label>
+                        <input type="email" name="email" id="email" onclick="valEmail()"
+                            placeholder="Ingrese su email aqui ....">
+                    </div>
+                    <br>
+                    <div class="genero">
+                        <p >Género</p><br>
+                        <p class="radio">
+                            <input type="radio" name="genero" id="generoH" value="hombre">Hombre
+                            <input type="radio" name="genero" id="generoM" value="Mujer">Mujer
+                            <input type="radio" name="genero" id="generoO" value="Otro">Otro
+                        </p>
+                    </div>
+                    <br>
+                    <div class="motivo">
+                        <p>El motivo de su visita a esta ciudad es por:
+                            <br><br>
+                            <input type="checkbox" name="motivo" id="motivo1" value="Turismo">
+                            <label for="motivo1">Turismo</label>
+                            <input type="checkbox" name="motivo" id="motivo2" value="Trabajo">
+                            <label for="motivo2">Trabajo</label>
+                            <input type="checkbox" name="motivo" id="motivo3" value="Estudio">
+                            <label for="motivo3">Estudio</label>
+                            <br>
+                            <input type="checkbox" name="motivo" id="motivo4" value="Salud">
+                            <label for="motivo4">Salud</label>
+                            <input type="checkbox" name="motivo" id="motivo5" value="Familiar">
+                            <label for="motivo5">Familiar</label>
+                            <input type="checkbox" name="motivo" id="motivo6" value="Viajante">
+                            <label for="motivo6">Viajante</label>
+                            <br>
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comentarios">Comentarios: (*)</label><br><br>
+                        <textarea name="comentarios" id="comentarios" onclick="valCom()"
+                            placeholder="Ingrese su mensaje"></textarea>
+                    </div>
+                    <br>
+                    <div class="btns">
+                        <button class="btnS" type="submit">Enviar</button>
+                        <!-- <button class="btnS" onclick="validar()">Enviar</button> -->
+                        <button class="btnR" type="reset">Reset</button>
+                    </div>
+                    <br>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <nav>
+                <hr><br>
+                <a class="foo" title="Facebook" target="_blank" href="https://www.facebook.com"><img class="img"
+                        src="img/logos/facebook.png" alt="Facebook" height="50" /></a>
+                <a class="foo" title="Instagram" target="_blank" href="https://www.instagram.com"><img class="img"
+                        src="img/logos/Instagram.jpg" alt="Instagram" height="50" /></a>
+                <a class="foo" title="Twitter" target="_blank" href="https://www.twitter.com"><img class="img"
+                        src="img/logos/twitter.png" alt="Twitter" height="50" /></a>
+                <a class="foo" title="Whatsapp" target="_blank" href="https://www.whatsapp.com"><img class="img"
+                        src="img/logos/whatsapp.png" alt="Whatsapp" height="50" /></a>
+            </nav>
+            <addess>Nelson Fernando Villalba - CaC2023 - Derechos reservados @2023</addess> <br>
+            <hr>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {	margin: 0; padding: 0;}
+:root {font-size: 16px; font-family: 'Roboto', sans-serif;}
+h1 {
+	text-align: center; 
+	color: rgb(19, 20, 126);
+	font-size: 3em;
+}
+h2 {color: rgb(19, 20, 126); font-size: 2.5em;}
+
+body {
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; *//*'Roboto', sans-serif;*/
+	background-color: rgb(192, 216, 215);
+}
+
+.logotipo {
+	width: 99%;
+	display: inline-flex;
+	justify-content: space-between;
+    padding: 5px;
+    margin: 5px 10px 5px 0px;
+    border-radius: 5px;
+    border: solid blue 2px;
+    box-shadow: 5px 5px 2px gray;
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .footer {
+	width: auto;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.contenedor .header {
+	background: #12203E;
+	background-image: url(../img/citi/Salta_pan2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-area: header;
+}
+
+.contenido {
+	font-weight: normal;
+	grid-area: contenido;
+	border: solid blue 2px;
+}
+
+/********************************************/
+form {
+    background-color: rgb(204, 223, 230);
+    margin: solid 10px blue;
+    width: 600px; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+    font-weight: bold;
+}
+div input {
+	width: 300px;
+	text-align: left;
+	height: 30px;
+	border: solid blue 2px;
+	border-radius: 5px;
+}
+
+.btns {
+	width: 300px;
+	margin: 0 0 20px 20px;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+/********************************************/
+
+.contenedor .footer {
+    background: #5d7dc4;
+	color: #fff;
+	grid-area: footer;
+}
+.foo {
+	margin: 0px 20px 0px 20px;
+}
+.img:hover {
+    background-color: rgba(225, 225, 236, 0.4);
+	height: 60px;
+}
+.btn-success {
+    margin: 0px 40px 0px 0px;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CRUD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" href="img/logos/escudo-salta.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/productos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logotipo">
+                <img src="img/logos/tur-salta.png" width="100">
+                <img src="img/logos/band-prov-salta.jpg" width="100">
+                <img src="img/logos/escudo-salta.jpg" width="55">
+            </div>
+            <h1>Comidas regionales de Salta</h1>
+        </header>
+        <main>
+            <div id="app" class="contenido">
+                <h2>Alta, Modificacion y Baja de Recetas</h2>
+                
+                <a class="btn btn-primary" href="producto_nuevo.html">Nueva receta</a>
+                <a class="btn btn-danger" href="index.html">Volver al Home</a>
+                <br><br>
+                <div v-if="error">
+                    <p>Lo sentimos , ........</p>
+                </div>
+                <div v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+                    </section>
+                    <section v-else>
+                        <div class="table-responsive">
+                            <table class="table table-success table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Nombre del plato</th>
+                                        <th scope="col">Ingredientes</th>
+                                        <th scope="col">Preparación</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="" v-for="producto in productos">
+                                        <td id="id1">
+                                            <div class="td1">{{producto.id}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="td2">{{producto.nombre}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="td3">{{producto.ingred}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="td4">{{producto.prepar}}</div>
+                                        </td>
+                                        <td>
+                                            <img width="600" :src="producto.imagen" :alt="producto.nombre">
+                                        </td>
+                                        <td id="id2">
+                                            <a class="btn btn-primary"
+                                                :href="'producto_update.html?id='+ producto.id">Editar</a>
+                                            <br><br>
+                                                <button type="button" class="btn btn-danger"
+                                                v-on:click="eliminar(producto.id)">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <nav>
+                <hr><br>
+                <a class="foo" title="Facebook" target="_blank" href="https://www.facebook.com"><img class="img"
+                        src="img/logos/facebook.png" alt="Facebook" height="50" /></a>
+                <a class="foo" title="Instagram" target="_blank" href="https://www.instagram.com"><img class="img"
+                        src="img/logos/Instagram.jpg" alt="Instagram" height="50" /></a>
+                <a class="foo" title="Twitter" target="_blank" href="https://www.twitter.com"><img class="img"
+                        src="img/logos/twitter.png" alt="Twitter" height="50" /></a>
+                <a class="foo" title="Whatsapp" target="_blank" href="https://www.whatsapp.com"><img class="img"
+                        src="img/logos/whatsapp.png" alt="Whatsapp" height="50" /></a>
+            </nav>
+            <addess>Nelson Fernando Villalba - CaC2023 - Derechos reservados @2023</addess> <br>
+            <hr>
+        </footer>
+    </div>
+
+    <!--Link de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/productos.js"></script>
+</body>
+
+</html>

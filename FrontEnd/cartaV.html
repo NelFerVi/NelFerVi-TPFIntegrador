@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cartaV.css">
+    <title>Carta de vinos</title>
+    <link rel="icon" href="img/logos/escudo-salta.jpg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logotipo">
+                <img src="img/logos/tur-salta.png" width="100">
+                <img src="img/logos/band-prov-salta.jpg" width="100">
+                <img src="img/logos/escudo-salta.jpg" width="55">
+            </div>
+            <h1>Comidas regionales de Salta</h1>
+            <nav class="navheader">
+                <a class="navh" href="index.html">Home</a>
+                <a class="navh" href="q_somos.html">Quienes somos</a>
+                <a class="navh" href="g_locales.html">Locales</a>
+                <a class="navh" href="recetas.html">Recetas</a>
+                <a class="navh" href="cartaV.html">Vinos</a>
+                <a class="navh" href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <div id="app" class="container">
+            <h3>Carta de Vinos</h3>
+            <br>
+            <div class="section1" v-for="elemento of recipes">
+                <div class="section2">
+                    <img class="card-img":src="elemento.image" :alt="elemento.title">
+                </div>
+                <div class="section3">
+                    <h4 class="card-text">Bodega: {{elemento.winery}}</h5>
+                        <p class="card-text">Clase: {{elemento.wine}}</p>
+                        <p class="card-text">Raiting promedio: {{elemento.rating.average}}</p>
+                        <p class="card-text">Opiniones: {{elemento.rating.reviews}}</p>
+                        <p class="card-text">Procedencia: {{elemento.location}}</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <nav>
+                <hr><br>
+                <a class="foo" title="Facebook" target="_blank" href="https://www.facebook.com"><img class="img"
+                        src="img/logos/facebook.png" alt="Facebook" height="50" /></a>
+                <a class="foo" title="Instagram" target="_blank" href="https://www.instagram.com"><img class="img"
+                        src="img/logos/Instagram.jpg" alt="Instagram" height="50" /></a>
+                <a class="foo" title="Twitter" target="_blank" href="https://www.twitter.com"><img class="img"
+                        src="img/logos/twitter.png" alt="Twitter" height="50" /></a>
+                <a class="foo" title="Whatsapp" target="_blank" href="https://www.whatsapp.com"><img class="img"
+                        src="img/logos/whatsapp.png" alt="Whatsapp" height="50" /></a>
+            </nav>
+            <addess>Nelson Fernando Villalba - CaC2023 - Derechos reservados @2023</addess> <br>
+            <hr>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/apiVinos.js"></script>
+</body>
+
+</html>

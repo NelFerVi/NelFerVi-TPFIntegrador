@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Presentacion</title>
+    <link rel="icon" href="img/logos/escudo-salta.jpg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body onload="reset1(), automat1(2000, 1), reset2(), automat2(2000, 1)">
+    <div class="contenedor">
+        <header class="header">
+            <div class="logotipo">
+                <img src="img/logos/tur-salta.png" width="100">
+                <img src="img/logos/band-prov-salta.jpg" width="100">
+                <img src="img/logos/escudo-salta.jpg" width="55">
+            </div>
+            <h1>Comidas regionales de Salta</h1>
+            <nav class="navheader">
+                <a class="navh" href="index.html">Home</a>
+                <a class="navh" href="q_somos.html">Quienes somos</a>
+                <a class="navh" href="g_locales.html">Locales</a>
+                <a class="navh" href="recetas.html">Recetas</a>
+                <a class="navh" href="cartaV.html">Vinos</a>
+                <a class="navh" href="contacto.html">Contacto</a>
+                <a class="navh" href="login.html">Login</a>
+            </nav>
+        </header>
+        <main class="contenido">
+            <div class="pres">
+                <h2>Presentación</h2>
+                <h3>Salta y sus sabores regionales</h3><br>
+                <h4>En la ciudad, la comida regional privilegia los ingredientes típicos del Norte argentino,
+                    que se cocinan y presentan de acuerdo a recetas familiares salteñas.
+                </h4><br>
+                <section>Empanadas, humita, locro, huaschalocro y tamales son las tradicionales comidas del Noroeste del
+                    país,
+                    pero en cada región, en cada restaurante, en cada casa tienen una preparación particular.
+                    Más pimentón, más grasa de pella, menos picante, con papa o batata; cada cocinero le pone su toque
+                    personal aun con los mismos elementos.
+                    <br>Como turistas, siempre optamos por conocer los ofrecimientos gastronómicos que son auténticos
+                    del lugar.
+                    Es por eso que nuestra preocupación es localizar aquellos sitios donde se ofrecen las preparaciones
+                    locales.
+                    En Salta fue sencillo saber dónde podíamos darnos ese gusto. Con solo consultar en nuestro hotel o a
+                    quienes
+                    nos recibían, llegó la respuesta.
+                    <br>Por supuesto que cada uno tiene su afinidad hacia un local u otro; las recetas provienen de los
+                    habitantes
+                    originarios pero hoy se preparan de acuerdo a un paladar más amplio y pueden tener algunas
+                    diferencias.
+                    <br>Las empanadas son una salida rápida cuando los paseos se superponen y el tiempo es escaso.
+                    En Salta se destacan por su masa casera, su relleno a base de carne magra, con agregado de papa,
+                    cebollín y condimentos, todo cocinado en grasa de pella. Con más tiempo, comimos carbonada, humita,
+                    varios locros diferentes y tamales, en los que el choclo y las carnes de vaca y cerdo se repiten
+                    pero en combinaciones distintas. Materias primas originarias como la carne de llama, el api o la
+                    quínua se han revalorizado y forman parte del menú zonal.
+                    <br>Para matar dos pájaros de un tiro, nos dedicamos a recorrer las peñas folclóricas. A la buena
+                    música,
+                    los intérpretes formidables y mejores bailarines le sumamos la buena cocina regional y, por
+                    supuesto,
+                    los vinos salteños generosos que acompañan la mesa bien puesta.
+                    <br>En las afueras de la ciudad, es dable observar que algunas casas de comida cocinan en horno de
+                    barro
+                    instalado en el patio. En su interior, los alimentos se preparan al rescoldo, con tiempo, con
+                    dedicación,
+                    y todo lo que luego se ofrece parece más rico aún.
+                    <br>Pero no todo lo regional tiene sabor salado. También hay postres y bocados dulces que merecen
+                    probarse.
+                    Compramos capias, empanadillas, nueces confitadas y hasta tomamos un café junto a una porción de
+                    pasta
+                    real rellena de dulce de cayote que, al recibirla en la mesa, nos pareció un simple bizcochuelo.
+                    Pues no; fue necesario probarla para notar la usanza salteña.
+                </section>
+            </div>
+        </main>
+
+        <aside class="aside1">
+            <br><h2>Comidas Típicas</h2>
+            <hr><br>
+            <div style="text-align:center">
+                <div class="imagen" onclick="parar()">
+                    <img id="comidas" src="" alt="" width="100%">
+                </div>
+                <img class="iconos" src="img/icorep/atras.png" onclick="cambio1(-1)">
+                <img class="iconos" src="img/icorep/retro.png" onclick="automat1(2000, -1)">
+                <img class="iconos" src="img/icorep/pausa.png" onclick="parar1()">
+                <img class="iconos" src="img/icorep/repro.png" onclick="automat1(2000, 1)">
+                <img class="iconos" src="img/icorep/sigui.png" onclick="cambio1(1)">
+            </div>
+        </aside>
+        <aside class="aside2">
+            <br><h2>Restaurantes Típicos</h2>
+            <hr><br>
+            <div style="text-align:center">
+                <div class="imagen" onclick="parar()">
+                    <img id="restos" src="" alt="" width="100%">
+                </div>
+                <img class="iconos" src="img/icorep/atras.png" onclick="cambio(-1)">
+                <img class="iconos" src="img/icorep/retro.png" onclick="automat(2000, -1)">
+                <img class="iconos" src="img/icorep/pausa.png" onclick="parar()">
+                <img class="iconos" src="img/icorep/repro.png" onclick="automat(2000, 1)">
+                <img class="iconos" src="img/icorep/sigui.png" onclick="cambio(1)">
+            </div>
+        </aside>
+        
+        <footer class="footer">
+            <nav>
+                <hr><br>
+                <a class="foo" title="Facebook" target="_blank" href="https://www.facebook.com"><img class="img"
+                        src="img/logos/facebook.png" alt="Facebook" height="50" /></a>
+                <a class="foo" title="Instagram" target="_blank" href="https://www.instagram.com"><img class="img"
+                        src="img/logos/Instagram.jpg" alt="Instagram" height="50" /></a>
+                <a class="foo" title="Twitter" target="_blank" href="https://www.twitter.com"><img class="img"
+                        src="img/logos/twitter.png" alt="Twitter" height="50" /></a>
+                <a class="foo" title="Whatsapp" target="_blank" href="https://www.whatsapp.com"><img class="img"
+                        src="img/logos/whatsapp.png" alt="Whatsapp" height="50" /></a>
+            </nav>
+            <addess>Nelson Fernando Villalba - CaC2023 - Derechos reservados @2023</addess> <br>
+            <hr>
+        </footer>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

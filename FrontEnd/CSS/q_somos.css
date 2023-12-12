@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: rgb(19, 20, 126);
+	font-size: 3em;
+}
+
+h2 {
+	color: rgb(19, 20, 126);
+	font-size: 2.5em;
+}
+
+h3 {
+	color: rgb(19, 20, 126);
+	font-size: 2em;
+}
+
+h4 {
+	color: rgb(19, 20, 126);
+	font-size: 1.5em;
+}
+
+section,
+article {
+	color: rgb(19, 20, 126);
+	font-size: 1.2em;
+}
+
+body {
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+	/*'Roboto', sans-serif;*/
+	background-color: rgb(192, 216, 215);
+}
+
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 0.5fr 1fr 1fr;
+	/* 1fr 1fr 1fr */
+	grid-template-rows: repeat(4, auto);
+	/* auto auto auto auto*/
+	grid-template-areas: "header header header"
+		"aside section1 section1"
+		"aside section2 section2"
+		"aside section3 section3"
+		"footer footer footer";
+}
+
+@media screen and (max-width: 780px) {
+	.contenedor {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "header header"
+			"aside section1"
+			"aside section2"
+			"aside section2"
+			"footer footer";
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.contenedor {
+		grid-template-areas: "header"
+			"aside"
+			"section1"
+			"section2"
+			"section3"
+			"footer";
+	}
+}
+
+.logotipo {
+	width: 99%;
+	display: inline-flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin: 5px 10px 5px 0px;
+	border-radius: 5px;
+	border: solid blue 2px;
+	box-shadow: 5px 5px 2px gray;
+}
+
+.navheader {
+	width: 99%;
+	display: inline-flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin: 5px 10px 5px 0px;
+	border-radius: 5px;
+	border: solid blue 2px;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.490);
+}
+
+.navh {
+	width: 15%;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: rgba(127, 255, 212, 0.5);
+	border: solid blue 3px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navh:hover {
+	background-color: rgba(0, 0, 255, 0.4);
+	color: aliceblue;
+	font-weight: bold;
+}
+
+.navh:link {
+	color: rgb(204, 0, 255);
+}
+
+.navh:visited {
+	color: rgb(2, 2, 156);
+}
+
+.navh:active {
+	background-color: green;
+	color: white;
+}
+
+.contenedor>div,
+.contenedor .header,
+.contenedor .aside,
+.contenedor .section1,
+.contenedor .section2,
+.contenedor .section3,
+.contenedor article,
+.contenedor .footer {
+	width: auto;
+	margin: 20;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.contenedor .header {
+	background: #12203E;
+	background-image: url(../img/citi/Salta_pan2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-area: header;
+}
+
+.aside,
+.section1,
+.section2,
+.section3 {
+	width: auto;
+	font-weight: normal;
+	border: solid blue 2px;
+	font-size: 1.2em;
+}
+
+ul,
+p {
+	margin: 20px 0 0 40px;
+	color: rgb(19, 20, 126);
+	font-size: 1.2em;
+}
+
+.aside {
+	grid-area: aside;
+}
+
+.section1 {
+	grid-area: section1;
+}
+
+.section2 {
+	grid-area: section2;
+}
+
+.section3 {
+	grid-area: section3;
+}
+
+.footer {
+	background: #5d7dc4;
+	color: #fff;
+	grid-area: footer;
+}
+
+.foo {
+	margin: 0px 20px 0px 20px;
+}
+
+.img:hover {
+	background-color: rgba(225, 225, 236, 0.4);
+	height: 60px;
+}
